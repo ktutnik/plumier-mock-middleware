@@ -10,6 +10,7 @@ const mocks: ApiMock = {
         email: "john.doe@gmail.com"
     },
 
+    // dynamic  result
     "GET /users/:id": ({ctx}) => {
         return response.json({
             id: ctx.path,

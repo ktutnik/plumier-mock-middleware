@@ -43,6 +43,8 @@ export class MockFacility extends DefaultFacility {
         // register middleware
         app.use(new MockMiddleware(mocks))
         // report about generate routes
+        // this just a report for analysis and swagger, not related to routing.
+        // routing process exists on MockMiddleware
         return mocks.map(x => ({
             kind: "VirtualRoute",
             url: x.path,
